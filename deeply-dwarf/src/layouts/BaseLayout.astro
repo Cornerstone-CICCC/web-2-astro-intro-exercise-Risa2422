@@ -1,0 +1,18 @@
+---
+import '../styles/global.css'
+const { pageTitle, pageDesc } = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle} - My Cool Website</title>
+    <meta name="description" content={pageDesc} />
+	</head>
+	<body>
+      <slot />
+  </body>
+</html>
